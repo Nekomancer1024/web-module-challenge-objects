@@ -56,9 +56,21 @@ const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  
+  discount: function(person){
+    if(person === 'teacher' || person === 'student'){
+      return burger.price = 13.5;
+    } else if (person === 'public'){
+      return burger.price = 16.2;
+    } else {
+      return burger.price = 18;
+    }
+  }
 }
 
+console.log('task 2: ', burger.discount('teacher'));
+console.log('task 2: ', burger.discount('student'));
+console.log('task 2: ', burger.discount('public'));
+console.log('task 2: ', burger.discount());
 
 
 ///////////////Reviews (MVP)///////////////////
